@@ -1,0 +1,67 @@
+<!-- app.component.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    
+</head>
+<body>
+
+
+    <nav>
+        <h2>Menú Principal</h2>
+    </nav>
+
+ 
+
+    <form action="tu_script_de_procesamiento.php" method="post">
+
+
+  
+    
+    <div class="container">
+        <div class="cuadro">
+        <h4>Origen</h4>
+        <div class="link-item">
+            <span class="indicator"></span>
+            <a  href="/origen-registro" >Crear Origen</a>
+        </div>
+        <div class="link-item">
+            <span class="indicator"></span>
+            <a href="/origen-lista">Lista</a>
+        </div>
+        </div>
+    
+        <div class="cuadro">
+        <h4>Destino</h4>
+        <div class="link-item">
+            <span class="indicator"></span>
+            <a href="/destino-registro">Crear </a>
+        </div>
+        <div class="link-item">
+            <span class="indicator"></span>
+            <a href="/destino-lista">Lista </a>
+        </div>
+        </div>
+    
+        </div>
+
+  </form>
+
+
+
+
+ 
+
+  <footer class="md footer-md footer-toolbar-padding hydrated">
+    <div>
+        <button (click)="salir()">Cerrar la Aplicación</button>
+    </div>
+</footer>
+
+  </body>
+
+</html>
+  

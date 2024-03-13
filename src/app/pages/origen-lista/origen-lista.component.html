@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-wvb4y8NDsxEmD1btiVP5vvJ/PkXrdUqAVX/A+y74K4r6Yt18bYaSMHPNxOny8b4kxD1KnFCSe9FXBukOtJ6i1Q=="
+        crossorigin="anonymous" />
+     
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="/menu"><i class="fas fa-home"></i>Menu</a>
+        <!-- <span>Registro</span> -->
+    </div>
+
+    <div class="content">
+        <h2>Realizar Búsqueda</h2>
+        <form id="form1">
+            <div class="row">
+                <div class="col">
+                    <label for="filtroOpcion">Opción:</label>
+                    <select id="filtroOpcion" name="filtroOpcion"  >
+                        <option value="todos">Todos</option>
+                        <option value="fecha">Fecha</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="filtroFecha">Filtrar por Fecha:</label>
+                    <input type="date" id="filtroFecha" name="filtroFecha">
+                </div>
+            </div>
+
+
+        </form>
+        <button (click)="actualizarTabla()" type="submit">Buscar</button>
+
+
+        <hr>
+        <h2>Mostrar Datos</h2>
+
+        <form id="form2">
+            <table>
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Código</th>
+                  <th>Fecha</th>
+                  <th>Producto</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let dato of datos; let i = index" [ngClass]="{'even-row': i % 2 === 0, 'odd-row': i % 2 !== 0}">
+                  <td>{{ i + 1 }}</td>
+                  <td>{{ dato.codigo }}</td>
+                  <td>{{ dato.fecha }}</td>
+                  <td>{{ dato.producto }}</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4" id="totalRegistros">Total registros: {{ datos.length }}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </form>        
+
+
+    </div>
+
+</body>
+
+</html>

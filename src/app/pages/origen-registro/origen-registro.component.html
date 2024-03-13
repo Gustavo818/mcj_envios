@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Ingreso de Datos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-wvb4y8NDsxEmD1btiVP5vvJ/PkXrdUqAVX/A+y74K4r6Yt18bYaSMHPNxOny8b4kxD1KnFCSe9FXBukOtJ6i1Q==" crossorigin="anonymous" />
+        
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="/menu"> <i class="fas fa-home"></i>  Menú</a>
+        <!-- <span>Registro</span> -->
+    </div>
+
+    <h2 style="text-align: center;">Formulario de Ingreso de Datos</h2>
+    
+    <form>
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="producto">Producto:</label>
+        <input type="text" id="producto" name="producto" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" style="width: 100%;" required></textarea>
+
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
